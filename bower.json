@@ -3,14 +3,16 @@
   "version": "0.0.1",
   "description": "Mean starter kit",
   "authors": [
-    "Jean-Baptiste Pasquier"
+    "Hélias Johan",
+    "Kévin Poyer",
+    "Pascale"
   ],
   "license": "ISC",
   "dependencies": {
     "jquery": "^2.2.2",
     "angular": "^1.5.6",
     "angular-route": "^1.5.6",
-    "bootstrap": "^3.3.6"
+    "materialize": "^0.98.2"
   },
   "ignore": [
     "**/.*",
