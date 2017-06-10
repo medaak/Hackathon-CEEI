@@ -73,3 +73,9 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 .waves-effect.waves-light.btn.registration.valid {
   background-color: #15b058;
 }
+
+/*profile*/
+.fieldprofile {
+  margin-top: 60px;
+  margin-left: 35px;
+}

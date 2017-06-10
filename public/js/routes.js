@@ -36,6 +36,11 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
           controller: 'emploiServicesController',
           controllerAs: 'vm'
         })
+        .when('/profile', {
+            templateUrl: 'views/profile.html',
+            controller: 'loginController',
+            controllerAs: 'vm'
+        })
         .otherwise({
             redirectTo: '/'
         })
