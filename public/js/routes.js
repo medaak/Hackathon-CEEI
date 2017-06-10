@@ -11,6 +11,16 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
             controller: 'loginController',
             controllerAs: 'vm'
         })
+        .when('/localisation', {
+          templateUrl: 'views/localisation.html',
+          controller: 'localisationController',
+          controllerAs: 'vm'
+        })
+        .when('/localisation/:id', {
+          templateUrl: 'views/emploiServices.html',
+          controller: 'emploiServicesController',
+          controllerAs: 'vm'
+        })
         .otherwise({
             redirectTo: '/'
         })
