@@ -62,6 +62,14 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     text-align: center;
   }
 
-  .buttonregistration {
-    margin: 10px;
+  .waves-effect.waves-light.btn.registration {
+    margin: 20px;
   }
+
+.waves-effect.waves-light.btn.registration.cancel {
+   background-color: #c1392d;
+}
+
+.waves-effect.waves-light.btn.registration.valid {
+  background-color: #15b058;
+}
