@@ -1,29 +1,29 @@
 import mongoose from 'mongoose';
 
-const todoSchema = new mongoose.Schema({
+const serviceSchema = new mongoose.Schema({
     description: String
 });
 
-let model = mongoose.model('Todo', todoSchema);
+let model = mongoose.model('Service', serviceSchema);
 
-export default class Todo {
+export default class Service {
 
     findAll(req, res) {
-        model.find({}, (err, todos) => {
+        model.find({}, (err, services) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(todos);
+                res.json(services);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, todo) => {
-            if (err || !todo) {
+        model.findById(req.params.id, (err, service) => {
+            if (err || !service) {
                 res.sendStatus(403);
             } else {
-                res.json(todo);
+                res.json(service);
             }
         });
     }
@@ -32,11 +32,11 @@ export default class Todo {
         model.create({
                 description: req.body.description
             },
-            (err, todo) => {
+            (err, service) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(todo);
+                    res.json(service);
                 }
             });
     }
@@ -46,11 +46,11 @@ export default class Todo {
             _id: req.params.id
         }, {
             description: req.body.description
-        }, (err, todo) => {
-            if (err || !todo) {
+        }, (err, service) => {
+            if (err || !service) {
                 res.status(500).send(err.message);
             } else {
-                res.json(todo);
+                res.json(service);
             }
         });
     }
