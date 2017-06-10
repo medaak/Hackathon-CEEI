@@ -4,10 +4,7 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
         .when('/', {
             templateUrl: 'views/main.html',
             controller: 'mainController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+            controllerAs: 'vm'
         })
         .when('/login', {
             templateUrl: 'views/login.html',
