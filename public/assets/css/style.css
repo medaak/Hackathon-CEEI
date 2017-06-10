@@ -61,3 +61,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
   .registration {
     text-align: center;
   }
+
+  .buttonregistration {
+    margin: 10px;
+  }
