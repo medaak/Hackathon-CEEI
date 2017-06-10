@@ -1,0 +1,69 @@
+<div class="row">
+  <h1 class="center">Création d'un services</h1>
+  <div class="container">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">mode_edit</i>
+      <input placeholder="intitulé du services" id="first_name" type="text">
+    </div>
+
+    <div class="input-field col s12">
+      <i class="material-icons prefix">Description</i>
+      <textarea id="icon_prefix2" class="materialize-textarea" placeholder="Description"></textarea>
+    </div>
+
+    <br>
+    <p class="container center">
+      <i class="material-icons prefix">directions_car</i>
+      <input ng-model="coVoiturageCar" type="checkbox" id="test5" />
+      <label for="test5">Co-voiturage</label>
+    </p>
+    <br>
+
+    <div ng-if="!coVoiturageCar" class="">
+
+    <div class="input-field col s12">
+      <i class="material-icons prefix">mode_edit</i>
+      <input placeholder="Adresse ligne" id="first_name" type="text">
+    </div>
+
+    <div class="input-field col s6">
+      <i class="material-icons prefix">location_city</i>
+      <input id="icon_telephone" type="tel" class="validate">
+      <label for="icon_telephone">Ville</label>
+    </div>
+
+    <div class="input-field col s6">
+      <i class="material-icons prefix">mode_edit</i>
+      <input id="icon_telephone" type="tel" class="validate">
+      <label for="icon_telephone">Code Postal</label>
+    </div>
+
+
+    <div class="input-field col s12">
+      <i class="material-icons prefix">link</i>
+      <input placeholder="Lien externe" id="first_name" type="text">
+    </div>
+  </div>
+
+
+    <div ng-if="coVoiturageCar==true" class="">
+
+      <div class="input-field col s6">
+        <i class="material-icons prefix">trending_flat</i>
+        <input id="icon_telephone" type="tel" class="validate">
+        <label for="icon_telephone">Lieu départ</label>
+      </div>
+
+      <div class="input-field col s6">
+        <i class="material-icons prefix">flag</i>
+        <input id="icon_telephone" type="tel" class="validate">
+        <label for="icon_telephone">Lieu arriver</label>
+      </div>
+
+    </div>
+    <div class="col s12 m7">
+      <a class="waves-effect waves-light btn right">VALIDER</a>
+    </div>
+
+  </div>
+</div>
