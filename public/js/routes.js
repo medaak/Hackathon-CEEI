@@ -11,6 +11,11 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
             controller: 'loginController',
             controllerAs: 'vm'
         })
+        .when('/registration', {
+            templateUrl: 'views/registration.html',
+            controller: 'loginController',
+            controllerAs: 'vm'
+        })
         .otherwise({
             redirectTo: '/'
         })
