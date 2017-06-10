@@ -1,16 +1,57 @@
-.navbar-yellow {
-    background-color: #FFF94D;
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/*NAVBAR*/
+
+.logo {
+  width: 70%;
+}
+
+nav, footer {
+  background-color: white!important;
+}
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+  box-shadow: none!important;
+}
+
+.bg {
+  width: 100%;
+}
+
+
+/*MAIN*/
+
+
+.redCard {
+  background-color: #C1392D!important;
+}
+
+.blueCard {
+  background-color: #297FB8!important;
+}
+
+.greenCard {
+  background-color: #15B058!important;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    color: white!important;
+}
+
+.arrow{
+  margin-left: 20px;
+}
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    background-color: transparent;
     border: none;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    border-radius: 0;
-    border-bottom: 2px solid black;
-}
-.navbar-brand img {
-    max-height: 100%;
-    transition: 0.8s;
-}
-.navbar-brand:hover img {
-    transform: rotate(360deg);
-}
+    border-bottom: 1px solid white!important;
+  }

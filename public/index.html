@@ -12,13 +12,18 @@
 
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
     </head>
     <body>
 
-        <ng-include src="'views/navbar.html'"></ng-include>
+        <ng-include src="'views/includes/navbar.html'"></ng-include>
 
-            <ng-view></ng-view>
+        <main><ng-view></ng-view></main>
+
+            <ng-include src="'views/includes/footer.html'"></ng-include>
+
 
             <script src="vendor/jquery/dist/jquery.min.js"></script>
 
