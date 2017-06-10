@@ -15,6 +15,7 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
             templateUrl: 'views/registration.html',
             controller: 'loginController',
             controllerAs: 'vm'
+        })
         .when('/localisation', {
           templateUrl: 'views/localisation.html',
           controller: 'localisationController',
