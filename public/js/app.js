@@ -7,6 +7,8 @@ angular.module('app', ['ngRoute'])
         .controller('loginController', loginController)
         .controller('localisationController', localisationController)
         .controller('emploiServicesController', emploiServicesController)
+        .controller('creationEmploiController', creationEmploiController)
+        .controller('creationServiceController', creationServiceController)
         .config(routes)
         .run(loginStatus)
         ;

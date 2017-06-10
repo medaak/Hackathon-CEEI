@@ -21,6 +21,16 @@ const routes = ($routeProvider, $httpProvider, $locationProvider) => {
           controller: 'localisationController',
           controllerAs: 'vm'
         })
+        .when('/creationEmploi', {
+          templateUrl: 'views/creationEmploi.html',
+          controller: 'creationEmploiController',
+          controllerAs: 'vm'
+        })
+        .when('/creationService', {
+          templateUrl: 'views/creationService.html',
+          controller: 'creationServiceController',
+          controllerAs: 'vm'
+        })
         .when('/localisation/:id', {
           templateUrl: 'views/emploiServices.html',
           controller: 'emploiServicesController',
