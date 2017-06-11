@@ -1,10 +1,12 @@
 <div class="row">
-  <form class="container">
-    <div class="input-field col s12">
-      <input class="center" placeholder="Code Postal" id="first_name" type="text" class="validate">
+<form class="container">
+  <h1 class="center">Code Postal</h1>
+        <div class="input-field col s12">
+            <i class="material-icons prefix">&#xE8B6;</i>
+            <input ng-model="searchText" type="text" class="form-control" placeholder="Recherche">
+        </div>
     </div>
-</div>
-
+</form>
 
 <div class="row">
   <div class="col s6">
@@ -12,7 +14,7 @@
       Services <br>
       <label>
       Off
-      <input type="checkbox" checked="checked">
+      <input ng-model="switch" type="checkbox" checked="checked">
       <span class="lever"></span>
       On
     </label>
@@ -24,8 +26,8 @@
         Emploi <br>
       <label>
       Off
-      <input type="checkbox" checked="checked">
-      <span class="lever"></span>
+      <input ng-model="switch"  type="checkbox" checked="checked">
+      <span  class="lever"></span>
       On
     </label>
     </div>
@@ -36,8 +38,8 @@
 
 <br>
 
-<div class="row">
-  <div ng-repeat="card in vm.emploiServices" class="col s12 m6">
+<div  ng-if="!switch" class="row">
+  <div ng-repeat="card in vm.emploiServices | filter:searchText" class="col s12 m6">
     <div class="card {{card.color}}">
       <div class="card-content white-text">
         <span class="card-title">{{card.job}}</span>
@@ -49,3 +51,4 @@
       </div>
     </div>
   </div>
+</div>
