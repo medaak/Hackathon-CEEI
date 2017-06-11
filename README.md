@@ -2,7 +2,7 @@
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
-## Copyright © 2017 -  all rights reserved to :
+## Copyright © 2017 -  all rights reserved:
 
 -   [Camille Antoine Fontaine](https://www.linkedin.com/in/camfontaine/)
 -   [Kevin Poyer](https://www.linkedin.com/in/kevin-poyer/)
