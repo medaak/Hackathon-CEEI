@@ -22,9 +22,17 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    isAdmin: {
-        type: Boolean,
-        default: false
+    name: {
+        type: String
+    },
+    lineAdresse: {
+        type: String
+    },
+    city: {
+        type: String
+    },
+    zipcode: {
+        type: String
     }
 });
 
@@ -118,6 +126,10 @@ export default class User {
                     res.json({
                         success: true,
                         user: user,
+                        name: req.body.name,
+                        lineAdresse:req.body.adressLine,
+                        city:req.body.city,
+                        zipcode:req.body.zipcode,
                         token: tk
                     });
                 }

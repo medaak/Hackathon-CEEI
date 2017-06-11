@@ -1,7 +1,22 @@
 import mongoose from 'mongoose';
+import User from './account.js';
 
 const serviceSchema = new mongoose.Schema({
-    description: String
+    title: String,
+    description: String,
+    adressLine: String,
+    city: String,
+    zipcode: String,
+    covoiturage: Boolean,
+    stepCities: [
+        adressLine: String,
+        city: String,
+        zipcode: String
+    ]
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
 });
 
 let model = mongoose.model('Service', serviceSchema);
@@ -28,9 +43,28 @@ export default class Service {
         });
     }
 
+    findByUser(req, res) {
+        var query = model.where({
+            userId: req.params.id
+        });
+        query.find({}, (err, services) => {
+            if (err || !services) {
+                res.sendStatus(403);
+            } else {
+                res.json(services);
+            }
+        });
+    }
+
     create(req, res) {
         model.create({
-                description: req.body.description
+                title: req.body.title,
+                description: req.body.description,
+                adressLine: req.body.adressLine,
+                city: req.body.city,
+                zipcode: req.body.zipcode,
+                stepCities: req.body.stepCities.slice(),
+                userId: req.body.userId
             },
             (err, service) => {
                 if (err) {
@@ -45,7 +79,11 @@ export default class Service {
         model.update({
             _id: req.params.id
         }, {
-            description: req.body.description
+            title: req.body.title,
+            description: req.body.description,
+            adressLine: req.body.adressLine,
+            city: req.body.city,
+            zipcode: req.body.zipcode
         }, (err, service) => {
             if (err || !service) {
                 res.status(500).send(err.message);
