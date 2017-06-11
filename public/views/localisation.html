@@ -72,7 +72,7 @@
     <div ng-repeat="card in vm.emploiServices | filter:searchText" class="col s12 m6">
       <div class="card {{card.color}}">
         <div class="card-content white-text">
-          <span class="card-title">{{card.job}}</span>
+          <a class="white-text" href="/#/localisation/{{card.id}}"><span class="card-title">{{card.job}}</span></a>
           <p>{{card.text}}</p>
           <p>{{card.adresse}}</p>
         </div>
