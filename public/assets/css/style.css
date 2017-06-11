@@ -103,3 +103,11 @@ nav, footer {
 .photoSize{
   width: 50%
 }
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 500px) {
+    .serviceResponsive {
+        display: none
+    }
+}
