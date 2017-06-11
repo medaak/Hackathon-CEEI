@@ -2,6 +2,14 @@
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
+### Copyright 2017 -  all rights reserved to :
+
+-   [Camille Antoine Fontaine](https://www.linkedin.com/in/camfontaine/)
+-   [Kevin Poyer](https://www.linkedin.com/in/kevin-poyer/)
+-   [Johan Helias](https://www.linkedin.com/in/johan-helias/)
+- [PascaleBarboteau](https://www.linkedin.com/in/pascale-barboteau-4a0409a5/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_all_connections%3BCgNgam%2BrTBiDp8tBZ5zU9w%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_base_all_connections-profile_link)
+
+
 Backend : Babel es2015
 
 Frontend : es2015 native

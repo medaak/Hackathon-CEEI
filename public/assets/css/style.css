@@ -16,9 +16,12 @@ main {
 p {
   font-size: medium;
 }
+h1{
+  color: #F7931E;
+}
 
-.orangeColor{
-  color: #F7931E
+.blueColor{
+  color: #297FB8;
 }
 /*NAVBAR*/
 
@@ -93,4 +96,10 @@ nav, footer {
 .fieldprofile {
   margin-top: 60px;
   margin-left: 35px;
+}
+
+/*Credit*/
+
+.photoSize{
+  width: 50%
 }
