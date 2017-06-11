@@ -1,11 +1,20 @@
 <div class="row">
-<form class="container">
-  <h1 class="center">Code Postal</h1>
-        <div class="input-field col s12">
-            <i class="material-icons prefix">&#xE8B6;</i>
-            <input ng-model="searchText" type="text" class="form-control" placeholder="Recherche">
-        </div>
+  <form class="container">
+    <div class="col s6 offset-s3">
+      <h1 class="center">Votre adresse</h3>
+      <input type="text" name="" value="" placeholder="Adresse">
+      <div class="row">
+        <input class="col s3" type="text" name="" value="" placeholder="Code postal"><input class="col s8 offset-s1" type="text" name="" value="" placeholder="Ville"></p>
+      </div>
     </div>
+
+
+    <div class="input-field col s12">
+      <h1 class="center">Liste des annonces</h1>
+      <i class="material-icons prefix">&#xE8B6;</i>
+      <input ng-model="searchText" type="text" class="form-control" placeholder="Recherche">
+    </div>
+</div>
 </form>
 
 
@@ -68,19 +77,19 @@
   </div> -->
 
 
-  <div class="row">
-    <div ng-repeat="card in vm.emploiServices | filter:searchText" class="col s12 m6">
-      <div class="card {{card.color}}">
-        <div class="card-content white-text">
-          <a class="white-text" href="/#/localisation/{{card.id}}"><span class="card-title">{{card.job}}</span></a>
-          <p>{{card.text}}</p>
-          <p>{{card.adresse}}</p>
-        </div>
-        <div class="card-action">
-          <a href="/#/localisation/{{card.id}}">Détail</a>
-        </div>
+<div class="row">
+  <div ng-repeat="card in vm.emploiServices | filter:searchText" class="col s12 m6">
+    <div class="card {{card.color}}">
+      <div class="card-content white-text">
+        <a class="white-text" href="/#/localisation/{{card.id}}"><span class="card-title">{{card.job}}</span></a>
+        <p>{{card.text}}</p>
+        <p>{{card.adresse}}</p>
+      </div>
+      <div class="card-action">
+        <a href="/#/localisation/{{card.id}}">Détail</a>
       </div>
     </div>
+  </div>
 
 
 

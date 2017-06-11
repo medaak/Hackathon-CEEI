@@ -15,8 +15,8 @@ function localisationController($location) {
   this.emploiServices = [{
     id: '1000',
     color: 'redCard',
-    job: 'Emploi - Caissier Employé',
-    text: "Souriant(e) et aimant le travail en équipe, le Caissier Employé Lidl accueille les clients et répond à leurs demandes.",
+    job: 'Emploi - Cariste',
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     adresse: '3 Rue Camille Claudel, 28630 Le Coudray, France',
   }, {
     id: '1001',

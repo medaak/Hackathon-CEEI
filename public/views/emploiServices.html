@@ -1,5 +1,7 @@
 <div class="container">
   <div class="col s12">
+    <h1 class="center">Fiche emploi</h1>
+
     <div class="card {{vm.emploiServices[0].color}}">
       <div class="card-content white-text">
         <span class="card-title">{{vm.emploiServices[0].job}}</span>
@@ -13,28 +15,58 @@
     </div>
   </div>
 
-<h1 class="center">Détail</h1>
+  <h1 class="center">Localisation</h1>
+  <div class="">
+    <img src="../assets/img/mapEmploiServices.png" alt="" style="width: 100%;">
+  </div>
 
-<div id="map"></div>
 
 
+  <div class="row col s12 serviceResponsive">
 
-<div class="row col s12 serviceResponsive">
-  <h1 class="center">Services</h1>
+    <h1 class="center">Services associés</h1>
 
-<div ng-repeat="service in vm.services" class="container col s4">
-  <div class="card-panel greenCard">
-    <div class="row valign-wrapper">
-      <div class="col s2">
-        <img src="assets/img/{{service.img}}.png" alt="" class="responsive-img">
-      </div>
-      <div class="col s10">
-        <p>{{service.title}}</p>
-        <span class="black-text">
+    <div ng-repeat="service in vm.services" class="container col s4">
+      <div class="card-panel greenCard">
+        <div class="row valign-wrapper">
+          <div class="col s2">
+            <img src="assets/img/{{service.img}}.png" alt="" class="responsive-img">
+          </div>
+          <div class="col s10">
+            <p><strong style="font-size: 1.5em;">{{service.title}}</strong></p>
+            <span class="black-text">
           {{service.description}}
         </span>
+            <p style="text-align: right;margin-top: 2em;">{{service.distance}}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="row col s12 serviceResponsive">
+
+    <h1 class="center">Transports associés</h1>
+
+    <div class="container col s4">
+      <div class="card-panel blueCard">
+        <div class="row valign-wrapper">
+          <div class="col s12">
+            <p><strong style="font-size: 1.5em;">BlaBlaCar</strong></p>
+            <p style="text-align: right;margin-top: 2em;">Lien</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container col s4">
+      <div class="card-panel blueCard">
+        <div class="row valign-wrapper">
+          <div class="col s12">
+            <p><strong style="font-size: 1.5em;">Transbeauce</strong></p>
+            <p style="text-align: right;margin-top: 2em;">Lien</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
