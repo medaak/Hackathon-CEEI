@@ -8,6 +8,9 @@ main {
   flex: 1 0 auto;
 }
 
+p {
+  font-size: medium;
+}
 /*NAVBAR*/
 
 .logo {
@@ -28,7 +31,12 @@ nav, footer {
 
 
 /*MAIN*/
-
+.presentation {
+  font-size: x-large;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+}
 
 .redCard {
   background-color: #C1392D!important;
@@ -46,7 +54,7 @@ nav, footer {
     color: white!important;
 }
 
-.arrow{
+.arrow {
   margin-left: 20px;
 }
 
@@ -55,6 +63,10 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     border: none;
     border-bottom: 1px solid white!important;
   }
+
+.card-title {
+  font-weight: 700 !important;
+}
 
   /*Regsitration*/
 
