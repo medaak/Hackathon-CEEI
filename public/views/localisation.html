@@ -8,13 +8,17 @@
     </div>
 </form>
 
-<div class="row">
+
+<!-- SWITCH -->
+
+
+<!-- <div class="row">
   <div class="col s6">
     <div class="switch right">
       Services <br>
       <label>
       Off
-      <input ng-model="switch" type="checkbox" checked="checked">
+      <input ng-model="vm.switch1" type="checkbox" checked="checked">
       <span class="lever"></span>
       On
     </label>
@@ -26,20 +30,19 @@
         Emploi <br>
       <label>
       Off
-      <input ng-model="switch"  type="checkbox" checked="checked">
+      <input ng-model="vm.switch2"  type="checkbox" checked="checked">
       <span  class="lever"></span>
       On
     </label>
     </div>
   </div>
-
 </div>
 
 
 <br>
 
-<div  ng-if="!switch" class="row">
-  <div ng-repeat="card in vm.emploiServices | filter:searchText" class="col s12 m6">
+<div class="row">
+  <div ng-repeat="card in vm.emploiServices | filter:{searchText,type:'1'}" ng-class="{'col s12 m6':vm.switch2,'col s12':!vm.switch2}">
     <div class="card {{card.color}}">
       <div class="card-content white-text">
         <span class="card-title">{{card.job}}</span>
@@ -51,4 +54,35 @@
       </div>
     </div>
   </div>
+  <div ng-if="card.type=='2'"  ng-repeat="card in vm.emploiServices | filter:{searchText,type:'2'}" ng-class="{'col s12 m6':vm.switch1,'col s12':!vm.switch1}">
+    <div class="card {{card.color}}">
+      <div class="card-content white-text">
+        <span class="card-title">{{card.job}}</span>
+        <p>{{card.text}}</p>
+        <p>{{card.adresse}}</p>
+      </div>
+      <div class="card-action">
+        <a href="/#/localisation/{{card.id}}">Détail</a>
+      </div>
+    </div>
+  </div> -->
+
+
+  <div class="row">
+    <div ng-repeat="card in vm.emploiServices | filter:searchText" class="col s12 m6">
+      <div class="card {{card.color}}">
+        <div class="card-content white-text">
+          <span class="card-title">{{card.job}}</span>
+          <p>{{card.text}}</p>
+          <p>{{card.adresse}}</p>
+        </div>
+        <div class="card-action">
+          <a href="/#/localisation/{{card.id}}">Détail</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
 </div>
