@@ -13,6 +13,10 @@ main {
  width: 100%;
 }
 
+p {
+  font-size: medium;
+}
+
 /*NAVBAR*/
 
 .logo {
@@ -33,7 +37,12 @@ nav, footer {
 
 
 /*MAIN*/
-
+.presentation {
+  font-size: x-large;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+}
 
 .redCard {
   background-color: #C1392D!important;
@@ -51,8 +60,12 @@ nav, footer {
     color: white!important;
 }
 
-.arrow{
+.arrow {
   margin-left: 20px;
+}
+
+.card-title {
+  font-weight: 700 !important;
 }
 
   /*Regsitration*/
